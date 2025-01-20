@@ -41,9 +41,9 @@ export default function Banner({}: Props) {
           <p className="text-[#192335] sm:text-lg text-[15px] leading-normal font-semibold">
             200+ sinh viên tin tưởng và yêu quý
           </p>
-          <p className="text-[#192335] text-3xl lg:text-4xl xl:text-[56px] xl:leading-[1.1] font-bold leading-tight mt-2 lg:mt-8">
+          <p className="text-[#192335] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[56px] xl:leading-[1.1] font-bold leading-tight mt-2 lg:mt-8">
             Chinh phục mục tiêu học tập APTIS của bạn với
-          <span className="relative inline-block h-14 lg:h-[45px] xl:h-[75px] overflow-hidden w-full">
+          <span className="relative inline-block h-10 md:h-14 lg:h-[45px] xl:h-[75px] overflow-hidden w-full">
             {words.map((word, index) => (
               <b
                 key={index}
@@ -55,7 +55,7 @@ export default function Banner({}: Props) {
                     : "translate-y-[100%] opacity-0"
                 }`}
               >
-                <span className="font-bold text-3xl lg:text-4xl xl:text-[56px] xl:leading-[1.1] text-[#192335] bg-gradient-to-r from-[#2f57ef] to-[#b966e7] text-transparent bg-clip-text">
+                <span className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[56px] xl:leading-[1.1] text-[#192335] bg-gradient-to-r from-[#2f57ef] to-[#b966e7] text-transparent bg-clip-text">
                   {word}
                 </span>
               </b>
