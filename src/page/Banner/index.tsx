@@ -47,7 +47,7 @@ export default function Banner({}: Props) {
             {words.map((word, index) => (
               <b
                 key={index}
-                className={`absolute top-0 left-0 w-full h-full transition-all xl:pt-0 pt-2 duration-[1000ms] ease-[cubic-bezier(.25,.8,.25,1)] ${
+                className={`absolute top-0 left-0 w-full h-full transition-all xl:pt-1 sm:pt-2 pt-0 duration-[1000ms] ease-[cubic-bezier(.25,.8,.25,1)] ${
                   activeIndex === index
                     ? "translate-y-0 opacity-100"
                     : activeIndex === (index - 1 + words.length) % words.length

@@ -89,7 +89,7 @@ export default function NavBar({}: Props) {
 
           {/* Menu Links */}
           <div
-            className={`fixed top-0  right-0 w-1/3 sm:w-1/4 bg-white shadow-lg z-40 transform transition-transform duration-500 xl:pt-0 pt-16  ${
+            className={`fixed top-0  right-0 w-1/2 sm:w-1/4 bg-white shadow-lg z-40 transform transition-transform duration-500 xl:pt-0 pt-16  ${
               isMenuOpen ? "translate-x-0 h-screen" : "translate-x-full h-full"
             } xl:relative xl:translate-x-0 xl:w-auto xl:bg-transparent xl:shadow-none`}
           >
