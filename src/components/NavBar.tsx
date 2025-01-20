@@ -75,7 +75,7 @@ export default function NavBar({}: Props) {
           </a>
 
           {/* Button Group */}
-          <div className="xl:hidden inline-block">{renderButton()}</div>
+          <div className="xl:hidden sm:inline-block hidden">{renderButton()}</div>
 
           {/* Hamburger Icon */}
           <div className="xl:hidden z-50">

@@ -38,7 +38,7 @@ export default function Banner({}: Props) {
             <StarFilled className="text-yellow-500" />
             <StarFilled className="text-yellow-500" />
           </div>
-          <p className="text-[#192335] text-lg font-semibold">
+          <p className="text-[#192335] sm:text-lg text-[15px] leading-normal font-semibold">
             200+ sinh viên tin tưởng và yêu quý
           </p>
           <p className="text-[#192335] text-3xl lg:text-4xl xl:text-[56px] xl:leading-[1.1] font-bold leading-tight mt-2 lg:mt-8">
@@ -62,7 +62,7 @@ export default function Banner({}: Props) {
             ))}
           </span>
           </p>
-          <p className="mt-1 lg:mt-4 text-lg">
+          <p className="mt-1 lg:mt-4 sm:text-lg text-base">
             Sự <span className="underline">thành công</span> của bạn là{" "}
             <span className="underline">niềm vui</span> của chúng tôi
           </p>
