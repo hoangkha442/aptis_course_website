@@ -28,9 +28,9 @@ export default function Banner({}: Props) {
   return (
     <section className="relative z-10 bg-gradient-to-l from-[#9135DD] to-[#9135DD] py-36 pb-[1000px]">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white to-white/10"></div>
-      <div className="relative z-10 max-w-7xl mx-auto px-8 flex">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 flex flex-col md:flex-row">
         {/* Text Section */}
-        <div className="pt-10">
+        <div className="md:pt-10 pt-0">
           <div className="flex space-x-1">
             <StarFilled className="text-yellow-500" />
             <StarFilled className="text-yellow-500" />
@@ -41,14 +41,13 @@ export default function Banner({}: Props) {
           <p className="text-[#192335] text-lg font-semibold">
             200+ sinh viên tin tưởng và yêu quý
           </p>
-          <p className="text-[#192335] text-[56px] font-bold leading-tight mt-8">
+          <p className="text-[#192335] text-3xl lg:text-4xl xl:text-[56px] xl:leading-[1.1] font-bold leading-tight mt-2 lg:mt-8">
             Chinh phục mục tiêu học tập APTIS của bạn với
-          </p>
-          <span className="relative inline-block h-[75px] overflow-hidden w-full">
+          <span className="relative inline-block h-14 lg:h-[45px] xl:h-[75px] overflow-hidden w-full">
             {words.map((word, index) => (
               <b
                 key={index}
-                className={`absolute top-0 left-0 w-full h-full transition-all duration-[1000ms] ease-[cubic-bezier(.25,.8,.25,1)] ${
+                className={`absolute top-0 left-0 w-full h-full transition-all xl:pt-0 pt-2 duration-[1000ms] ease-[cubic-bezier(.25,.8,.25,1)] ${
                   activeIndex === index
                     ? "translate-y-0 opacity-100"
                     : activeIndex === (index - 1 + words.length) % words.length
@@ -56,13 +55,14 @@ export default function Banner({}: Props) {
                     : "translate-y-[100%] opacity-0"
                 }`}
               >
-                <span className="font-bold text-[56px] text-[#192335] bg-gradient-to-r from-[#2f57ef] to-[#b966e7] text-transparent bg-clip-text">
+                <span className="font-bold text-3xl lg:text-4xl xl:text-[56px] xl:leading-[1.1] text-[#192335] bg-gradient-to-r from-[#2f57ef] to-[#b966e7] text-transparent bg-clip-text">
                   {word}
                 </span>
               </b>
             ))}
           </span>
-          <p className="mt-4 text-lg">
+          </p>
+          <p className="mt-1 lg:mt-4 text-lg">
             Sự <span className="underline">thành công</span> của bạn là{" "}
             <span className="underline">niềm vui</span> của chúng tôi
           </p>
@@ -72,7 +72,7 @@ export default function Banner({}: Props) {
             <img
                 src={banner}
                 alt=""
-                className="w-[620px] h-[620px] object-cover relative z-10"
+                className="w-full h-full object-cover relative z-10"
             />
             <img
                 src={icon1}

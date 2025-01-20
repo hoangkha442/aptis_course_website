@@ -23,7 +23,7 @@ export default function NavBar({}: Props) {
       const currentScrollY = window.scrollY;
 
       // Xác định trạng thái cuộn
-      if (currentScrollY > lastScrollY && currentScrollY > 0) {
+      if (currentScrollY > lastScrollY && currentScrollY > 20) {
         setScrollDirection("down");
         setIsMenuOpen(false);
       } else if (currentScrollY < lastScrollY) {
@@ -31,7 +31,7 @@ export default function NavBar({}: Props) {
       }
 
       // Kiểm tra nếu đã cuộn qua một khoảng cách nhất định
-      setIsScrolled(currentScrollY > 0);
+      setIsScrolled(currentScrollY > 20);
       lastScrollY = currentScrollY;
     };
 
@@ -89,11 +89,11 @@ export default function NavBar({}: Props) {
 
           {/* Menu Links */}
           <div
-            className={`fixed top-0 right-0 h-full w-1/3 sm:w-1/4 bg-white shadow-lg z-40 transform transition-transform duration-500 xl:pt-0 pt-16  ${
+            className={`fixed top-0  right-0 w-1/3 sm:w-1/4 bg-white shadow-lg z-40 transform transition-transform duration-500 xl:pt-0 pt-16  ${
               isMenuOpen ? "translate-x-0 h-screen" : "translate-x-full h-full"
             } xl:relative xl:translate-x-0 xl:w-auto xl:bg-transparent xl:shadow-none`}
           >
-            <ul className="flex flex-col xl:flex-row items-start xl:items-center gap-6 p-8 xl:p-0 text-[#111] font-bold text-[15px] leading-[1.6]">
+            <ul className="flex flex-col xl:flex-row items-start xl:items-center gap-8 p-8 xl:p-0 text-[#111] font-bold text-[15px] leading-[1.6]">
               <li className="py-[10px]">
                 <Link
                   to={"/"}
