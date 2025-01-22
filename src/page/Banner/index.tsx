@@ -5,6 +5,8 @@ import icon1 from "../../assets/icon1.png";
 import icon2 from "../../assets/icon2.png";
 import icon3 from "../../assets/icon3.png";
 import icon4 from "../../assets/icon4.png";
+import Card from "../../components/Card";
+import { cardData } from "../../components/Card/CardData";
 
 type Props = {};
 
@@ -26,10 +28,16 @@ export default function Banner({}: Props) {
   }, [words.length]);
 
   return (
-    <section className="relative z-10 bg-gradient-to-l from-[#9135DD] to-[#9135DD] py-36 pb-[1000px]">
+    <section className="relative z-10 bg-gradient-to-l from-[#9135DD] to-[#9135DD] py-36 pb-28 h-full">
+      {/* Last Image */}
+      <div
+          className="absolute bottom-[2px] left-0 w-full h-[145px] bg-cover bg-no-repeat z-[9] "
+          style={{ background: `url(https://monaacademy.monamedia.net/wp-content/themes/edumall-child/images/banner-bg-shape-1.svg)`, backgroundPosition: "center center",}}
+      ></div>
+      {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white to-white/10"></div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-8 flex flex-col md:flex-row">
-        {/* Text Section */}
         <div className="md:pt-10 pt-0">
           <div className="flex space-x-1">
             <StarFilled className="text-yellow-500" />
@@ -96,6 +104,26 @@ export default function Banner({}: Props) {
             />
         </div>
       </div>
+
+        {/* Card */}
+      <div className="max-w-7xl mx-auto px-8 pt-4">
+          <div className="relative z-[45] mt-0 mb-0 bg-[#430486] rounded-[10px] transition-[background ,border-radius,box-shadow] duration-300">
+            {/* Background Overlay */}
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[rgba(145,53,221,0.63)] via-[rgba(145,53,221,0.63)] to-[rgba(200,50,180,0.5)] backdrop-blur-[15px] rounded-[10px] pointer-events-none"></div>
+            {/* Content Card */}
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {cardData.map((card, index) => (
+                <Card
+                  key={index}
+                  image={card.image}
+                  title={card.title}
+                  description={card.description}
+                />
+              ))}
+            </div>
+          </div>
+      </div>
+
     </section>
   );
 }
