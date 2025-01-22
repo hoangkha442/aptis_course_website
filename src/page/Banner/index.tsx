@@ -31,7 +31,7 @@ export default function Banner({}: Props) {
     <section className="relative z-10 bg-gradient-to-l from-[#9135DD] to-[#9135DD] py-36 pb-28 h-full">
       {/* Last Image */}
       <div
-          className="absolute bottom-[2px] left-0 w-full h-[145px] bg-cover bg-no-repeat z-[9] "
+          className="absolute bottom-[-2px] left-0 w-full h-[145px] bg-cover bg-no-repeat z-[9] "
           style={{ background: `url(https://monaacademy.monamedia.net/wp-content/themes/edumall-child/images/banner-bg-shape-1.svg)`, backgroundPosition: "center center",}}
       ></div>
       {/* Overlay */}
