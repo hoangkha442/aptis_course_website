@@ -24,7 +24,7 @@ export const cardData = [
   },
   {
     image: Class,
-    title: "50+ lớp học đa dạng",
+    title: "Lớp học chất lượng",
     description:
       "Các lớp học online phù hợp với mọi trình độ, 1 kèm 1 giúp bạn học tập hiệu quả và linh hoạt theo thời gian biểu cá nhân.",
   },
