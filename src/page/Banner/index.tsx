@@ -36,7 +36,6 @@ export default function Banner({}: Props) {
       ></div>
       {/* Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white to-white/10"></div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-8 flex flex-col md:flex-row">
         <div className="md:pt-10 pt-0">
           <div className="flex space-x-1">

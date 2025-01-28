@@ -9,3 +9,12 @@
     }
     
 }
+/* Tùy chỉnh thẻ <a> */
+.aptis-card {
+  @apply px-12 shrink-0 h-[65px] text-[#212327] flex items-center justify-center rounded-full tracking-[-0.6px] capitalize text-center text-[18px] leading-[65px] bg-white shadow-[0px_6px_34px_rgba(215,216,222,0.41)];
+}
+
+/* Thêm hiệu ứng hover nếu cần */
+.aptis-card:hover {
+  @apply bg-[#f5f5f5] shadow-lg;
+}
