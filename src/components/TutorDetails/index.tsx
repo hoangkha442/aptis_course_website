@@ -34,7 +34,7 @@ const TutorDetails: React.FC<TutorDetailsProps> = ({
       </div>
 
       {/* Thông tin giảng viên */}
-      <div className="flex-1 cursor-pointer">
+      <div className="flex-1">
         <div className="text-start">
           <h2 className="text-2xl font-bold">{name}</h2>
           <p className="text-gray-800 font-medium">{title}</p>

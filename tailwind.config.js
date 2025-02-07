@@ -35,7 +35,7 @@ export default {
         float: 'float 2s ease-in-out infinite',
         scroll: 'scroll 20s linear infinite',
         scrollReverse: 'scrollReverse 20s linear infinite',
-        moveUnderline: "moveUnderline 10s ease-in-out infinite",
+        moveUnderline: "moveUnderline 8s ease-in-out infinite alternate",
       },
     },
   },

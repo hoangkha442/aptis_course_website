@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo_course_website.png";
 import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import { showToast } from "../utils/toast"; // Import Toast function
 
 type Props = {};
 
@@ -11,6 +12,7 @@ export default function NavBar({}: Props) {
   const [scrollDirection, setScrollDirection] = useState<"up" | "down" | null>(
     null
   );
+  const [isCooldown, setIsCooldown] = useState(false); // State to limit clicks
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -22,7 +24,6 @@ export default function NavBar({}: Props) {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Xác định trạng thái cuộn
       if (currentScrollY > lastScrollY && currentScrollY > 20) {
         setScrollDirection("down");
         setIsMenuOpen(false);
@@ -30,7 +31,6 @@ export default function NavBar({}: Props) {
         setScrollDirection("up");
       }
 
-      // Kiểm tra nếu đã cuộn qua một khoảng cách nhất định
       setIsScrolled(currentScrollY > 20);
       lastScrollY = currentScrollY;
     };
@@ -45,12 +45,26 @@ export default function NavBar({}: Props) {
   const renderButton = () => {
     return (
       <div className="flex items-center gap-5">
-        <button className="font-semibold text-[#111] text-sm">Đăng nhập</button>
-        <button className="py-3 px-6 bg-[#11111111] rounded-md font-semibold text-[#111] text-sm hover:bg-customPurple hover:text-white transition-all duration-500">
+        <button
+        onClick={() => handleToastClick("Tính năng Đăng nhập đang phát triển!")}
+        className="font-semibold text-[#111] text-sm">Đăng nhập</button>
+        <button
+        onClick={() => handleToastClick("Tính năng Đăng ký đang phát triển!")}
+        className="py-3 px-6 bg-[#11111111] rounded-md font-semibold text-[#111] text-sm hover:bg-customPurple hover:text-white transition-all duration-500">
           Đăng Ký
         </button>
       </div>
     );
+  };
+
+  // Function to handle Toast click with cooldown
+  const handleToastClick = (message: string) => {
+    if (isCooldown) return; 
+    showToast(message, "info"); 
+    setIsCooldown(true); 
+    setTimeout(() => {
+      setIsCooldown(false); 
+    }, 3000);
   };
 
   return (
@@ -59,7 +73,7 @@ export default function NavBar({}: Props) {
         isScrolled
           ? scrollDirection === "up"
             ? "translate-y-0 bg-white shadow-md"
-            : "-translate-y-full  bg-white shadow-md"
+            : "-translate-y-full bg-white shadow-md"
           : "translate-y-0 bg-transparent"
       }`}
     >
@@ -89,7 +103,7 @@ export default function NavBar({}: Props) {
 
           {/* Menu Links */}
           <div
-            className={`fixed top-0  right-0 w-1/2 sm:w-1/4 bg-white shadow-lg z-40 transform transition-transform duration-500 xl:pt-0 pt-16  ${
+            className={`fixed top-0 right-0 w-1/2 sm:w-1/4 bg-white shadow-lg z-40 transform transition-transform duration-500 xl:pt-0 pt-16 ${
               isMenuOpen ? "translate-x-0 h-screen" : "translate-x-full h-full"
             } xl:relative xl:translate-x-0 xl:w-auto xl:bg-transparent xl:shadow-none`}
           >
@@ -102,41 +116,47 @@ export default function NavBar({}: Props) {
                   Trang chủ
                 </Link>
               </li>
-              <li className="py-[10px] relative overflow-hidden group">
-                <Link
-                  to={"/introduction"}
-                  className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple"
-                >
+              <li
+                className="py-[10px] relative overflow-hidden group cursor-pointer"
+                onClick={() => handleToastClick("Tính năng Giới thiệu đang phát triển!")}
+              >
+                <span className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple">
                   Giới thiệu
                   <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-customPurple transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </span>
               </li>
-              <li className="py-[10px] relative overflow-hidden group">
-                <Link
-                  to={"/course"}
-                  className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple"
-                >
+
+              {/* Show Toast when clicking Course (With Cooldown) */}
+              <li
+                className="py-[10px] relative overflow-hidden group cursor-pointer"
+                onClick={() => handleToastClick("Tính năng Khóa học đang phát triển!")}
+              >
+                <span className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple">
                   Khóa học
                   <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-customPurple transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </span>
               </li>
-              <li className="py-[10px] relative overflow-hidden group">
-                <Link
-                  to={"/blog"}
-                  className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple"
-                >
+
+              {/* Show Toast when clicking Blog (With Cooldown) */}
+              <li
+                className="py-[10px] relative overflow-hidden group cursor-pointer"
+                onClick={() => handleToastClick("Tính năng Blog đang phát triển!")}
+              >
+                <span className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple">
                   Blog
                   <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-customPurple transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </span>
               </li>
-              <li className="py-[10px] relative overflow-hidden group">
-                <Link
-                  to={"/contact"}
-                  className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple"
-                >
+
+              {/* Show Toast when clicking Contact (With Cooldown) */}
+              <li
+                className="py-[10px] relative overflow-hidden group cursor-pointer"
+                onClick={() => handleToastClick("Tính năng Liên hệ đang phát triển!")}
+              >
+                <span className="relative text-black pb-[6px] transition-all duration-300 hover:text-customPurple">
                   Liên hệ
                   <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-customPurple transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </span>
               </li>
             </ul>
           </div>

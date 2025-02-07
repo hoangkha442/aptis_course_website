@@ -1,6 +1,22 @@
+import { useState } from "react";
 import { PlusOutlined } from "@ant-design/icons";
+import { showToast } from "../../utils/toast"
 
 export default function CertiAndDoc() {
+  const [isCooldown, setIsCooldown] = useState(false);
+
+  // Function to handle click with cooldown
+  const handleItemClick = (item: string) => {
+    if (isCooldown) return; // Prevent multiple clicks
+
+    showToast(`Tính năng "${item}" đang phát triển!`, "info"); // Show toast notification
+
+    setIsCooldown(true); // Activate cooldown
+    setTimeout(() => {
+      setIsCooldown(false); // Reset cooldown after 3 seconds
+    }, 3000);
+  };
+
   return (
     <section className="pt-1 md:pt-6 pb-6 ">
       <div className="text-center max-w-7xl mx-auto px-6">
@@ -25,7 +41,7 @@ export default function CertiAndDoc() {
               "Practice Test - Bậc B2",
               "Tips & Tricks - Bậc B2",
             ].map((item, index) => (
-              <a key={index} href="#" className="aptis-card">
+              <a key={index} onClick={() => handleItemClick(item)} className="aptis-card cursor-pointer">
                 <PlusOutlined className="mr-2" />
                 {item}
               </a>
@@ -43,7 +59,7 @@ export default function CertiAndDoc() {
               "Practice Test - Bậc C1",
               "Advanced Tips & Tricks - Bậc C1",
             ].map((item, index) => (
-              <a key={index} href="#" className="aptis-card">
+              <a key={index} onClick={() => handleItemClick(item)} className="aptis-card cursor-pointer">
                 <PlusOutlined className="mr-2" />
                 {item}
               </a>
@@ -60,7 +76,7 @@ export default function CertiAndDoc() {
               "Mẹo làm bài Aptis",
               "Kỹ năng Speaking chuyên sâu",
             ].map((item, index) => (
-              <a key={index} href="#" className="aptis-card">
+              <a key={index} onClick={() => handleItemClick(item)} className="aptis-card cursor-pointer">
                 <PlusOutlined className="mr-2" />
                 {item}
               </a>
