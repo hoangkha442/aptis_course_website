@@ -7,7 +7,7 @@ export default function CertiAndDoc() {
         <p className="text-sm leading-5 md:leading-6 font-medium text-heading mb-4 inline-block px-5 py-2 rounded-full uppercase bg-[#430486] text-white">
           Bạn không cần phải sợ những kỹ năng này nữa
         </p>
-        <p className="font-bold text-[28px] md:text-[34px] leading-7 md:leading-9 xl:leading-[1.1] text-[#192335] bg-gradient-to-r from-[#2f57ef] via-[#7f2fef] to-[#b966e7] text-transparent bg-clip-text">
+        <p className="font-bold text-2xl md:text-[34px] leading-7 md:leading-9 xl:leading-[1.1] text-[#192335] bg-gradient-to-r from-[#2f57ef] via-[#7f2fef] to-[#b966e7] text-transparent bg-clip-text">
           Các tài liệu tại Aptis Course Academy
         </p>
       </div>
