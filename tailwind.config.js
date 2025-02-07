@@ -25,11 +25,17 @@ export default {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0)' },
         },
+        moveUnderline: {
+          "0%": { left: "0%" },
+          "50%": { left: "50%" },
+          "100%": { left: "0%" },
+        },
       },
       animation: {
         float: 'float 2s ease-in-out infinite',
         scroll: 'scroll 20s linear infinite',
         scrollReverse: 'scrollReverse 20s linear infinite',
+        moveUnderline: "moveUnderline 10s ease-in-out infinite",
       },
     },
   },
