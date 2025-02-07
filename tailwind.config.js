@@ -28,8 +28,8 @@ export default {
       },
       animation: {
         float: 'float 2s ease-in-out infinite',
-        scroll: 'scroll 10s linear infinite',
-        scrollReverse: 'scrollReverse 10s linear infinite',
+        scroll: 'scroll 20s linear infinite',
+        scrollReverse: 'scrollReverse 20s linear infinite',
       },
     },
   },
