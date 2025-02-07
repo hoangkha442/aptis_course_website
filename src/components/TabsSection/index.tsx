@@ -53,10 +53,10 @@ export default function TabsSection() {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`relative w-full text-left px-8 py-6 rounded-lg text-base font-semibold transition-all duration-300 ${
+            className={`relative w-full text-left sm:px-8 px-4 sm:py-6 py-3 rounded-lg sm:text-base text-sm font-medium sm:font-semibold transition-all duration-300 ${
               activeIndex === index
-                ? "bg-[#430486] text-white after:content-[''] after:absolute after:top-1/2 after:ml-[2px] after:left-full after:border-l-[20px] after:border-l-[#430486] after:border-y-[12px] after:border-y-transparent after:mt-[-12px] after:opacity-100"
-                : "bg-black/5 text-white after:opacity-0"
+                ? "bg-[#430486] text-white md:after:content-[''] md:after:absolute md:after:top-1/2 md:after:ml-[2px] md:after:left-full md:after:border-l-[20px] md:after:border-l-[#430486] md:after:border-y-[12px] md:after:border-y-transparent md:after:mt-[-12px] md:after:opacity-100"
+                : "bg-black/5 text-white md:after:opacity-0"
             }`}
           >
             {tab.title}
@@ -67,11 +67,12 @@ export default function TabsSection() {
       {/* Hiển thị nội dung của tab */}
       <div className="rounded-xl flex flex-col items-center w-full">
         <img
-          src={tabs[activeIndex].image}
-          alt={tabs[activeIndex].title}
-          className="w-[585px] h-[585px] rounded-lg"
+            src={tabs[activeIndex].image}
+            alt={tabs[activeIndex].title}
+            className="w-full max-w-[585px] h-auto md:h-[585px] rounded-lg"
         />
       </div>
+
     </div>
   );
 }
