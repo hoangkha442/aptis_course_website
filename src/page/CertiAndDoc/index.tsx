@@ -2,7 +2,7 @@ import { PlusOutlined } from "@ant-design/icons";
 
 export default function CertiAndDoc() {
   return (
-    <section className="py-1 md:py-6">
+    <section className="pt-1 md:pt-6 pb-6 ">
       <div className="text-center max-w-7xl mx-auto px-6">
         <p className="text-sm leading-5 md:leading-6 font-medium text-heading mb-4 inline-block px-5 py-2 rounded-full uppercase bg-[#430486] text-white">
           Bạn không cần phải sợ những kỹ năng này nữa

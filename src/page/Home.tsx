@@ -1,6 +1,7 @@
 import BackToTop from "../components/BackToTop"
 import Banner from "./Banner"
 import CertiAndDoc from "./CertiAndDoc"
+import StudySupport from "./StudySupport"
 
 type Props = {}
 
@@ -10,6 +11,7 @@ export default function Home({}: Props) {
       <BackToTop scrollThreshold={200} />
       <Banner />
       <CertiAndDoc />
+      <StudySupport />
     </>
   )
 }
