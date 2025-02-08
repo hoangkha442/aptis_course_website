@@ -15,7 +15,7 @@ export default function Tutor({}: Props) {
           Câu nào khó - hỏi anh chị Aptis
         </p>
         <p className="font-semibold text-2xl md:text-[32px] leading-7 md:leading-9 xl:leading-[1.1] text-[#333333] py-3">
-          Anh chị{" "}
+          Anh chị
           <span className="bg-gradient-to-r from-[#2f57ef] via-[#7f2fef] to-[#a048cf] text-transparent bg-clip-text">
             Aptis
           </span>
