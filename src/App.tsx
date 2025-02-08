@@ -6,6 +6,7 @@ import NavBar from './components/NavBar.tsx'
 import Footer from './components/Footer.tsx'
 import Introduction from './page/Introduction/index.tsx'
 import BackToTop from './components/BackToTop/index.tsx'
+import Courses from './page/Courses/index.tsx'
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route index element={<Home />}/>
         <Route path='/gioi-thieu' element={<Introduction />}/>
+        <Route path='/khoa-hoc' element={<Courses />}/>
       </Routes>
       <Footer />
     </>
