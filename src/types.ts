@@ -3,3 +3,8 @@ export type CardProps = {
     title: string;
     description: string;
 };
+
+export type TitleProps = {
+    title: string;
+    description: string;
+}

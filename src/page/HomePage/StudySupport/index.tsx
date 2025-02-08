@@ -1,4 +1,4 @@
-import TabsSection from "../../components/TabsSection"
+import TabsSection from "../../../components/TabsSection"
 
 type Props = {}
 

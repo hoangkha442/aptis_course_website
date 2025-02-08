@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import banner from "../../assets/bannerMonaAcademy.png";
+import banner from "../../../assets/bannerMonaAcademy.png";
 import { StarFilled } from "@ant-design/icons";
-import icon1 from "../../assets/icon1.png";
-import icon2 from "../../assets/icon2.png";
-import icon3 from "../../assets/icon3.png";
-import icon4 from "../../assets/icon4.png";
-import Card from "../../components/Card";
-import { cardData } from "../../components/Card/CardData";
+import icon1 from "../../../assets/icon1.png";
+import icon2 from "../../../assets/icon2.png";
+import icon3 from "../../../assets/icon3.png";
+import icon4 from "../../../assets/icon4.png";
+import Card from "../../../components/Card";
+import { cardData } from "../../../components/Card/CardData";
 
 type Props = {};
 

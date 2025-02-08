@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { PlusOutlined } from "@ant-design/icons";
-import { showToast } from "../../utils/toast"
+import { showToast } from "../../../utils/toast"
 
 export default function CertiAndDoc() {
   const [isCooldown, setIsCooldown] = useState(false);
 
   // Function to handle click with cooldown
   const handleItemClick = (item: string) => {
-    if (isCooldown) return; // Prevent multiple clicks
+    if (isCooldown) return; 
 
-    showToast(`Tính năng "${item}" đang phát triển!`, "info"); // Show toast notification
+    showToast(`Tính năng "${item}" đang phát triển!`, "info"); 
 
-    setIsCooldown(true); // Activate cooldown
+    setIsCooldown(true);  
     setTimeout(() => {
-      setIsCooldown(false); // Reset cooldown after 3 seconds
+      setIsCooldown(false); 
     }, 3000);
   };
 

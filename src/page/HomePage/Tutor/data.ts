@@ -1,6 +1,6 @@
-import tutor1 from "../../assets/tutor1.png";
-import tutor2 from "../../assets/tutor2.png";
-import tutor3 from "../../assets/tutor3.png";
+import tutor1 from "../../../assets/tutor1.png";
+import tutor2 from "../../../assets/tutor2.png";
+import tutor3 from "../../../assets/tutor3.png";
 
 
 export const tutors = [

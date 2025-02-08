@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { tutors } from "./data";
-import TutorCard from "../../components/TutorCard";
-import TutorDetails from "../../components/TutorDetails";
+import TutorCard from "../../../components/TutorCard";
+import TutorDetails from "../../../components/TutorDetails";
 
 type Props = {};
 

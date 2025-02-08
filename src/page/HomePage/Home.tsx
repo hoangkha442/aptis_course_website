@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-import BackToTop from "../components/BackToTop"
 import Banner from "./Banner"
 import CertiAndDoc from "./CertiAndDoc"
 import FAQ from "./FAQ"
@@ -18,7 +17,6 @@ export default function Home({}: Props) {
       <Helmet>
           <title>Trang chủ | Aptis Course</title>
       </Helmet>
-      <BackToTop scrollThreshold={200} />
       <Banner />
       <CertiAndDoc />
       <StudySupport />
